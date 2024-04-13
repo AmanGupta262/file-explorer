@@ -1,0 +1,38 @@
+.Folder {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .expander,
+  .folderIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  .expander {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+  .folderIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}
+.folderChildren {
+  margin-left: 16px;
+  margin-top: 4px;
+
+  .file {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    display: flex;
+
+    .fileIcon {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+  }
+}

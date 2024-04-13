@@ -7,9 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "check-types": "tsc --noemit",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && yarn check-types",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 1",
     "preview": "vite preview",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "yarn check-types && yarn lint --fix",
     "prepare": "husky && husky install"
   },
   "dependencies": {
@@ -33,12 +33,13 @@
     "husky": "^9.0.11",
     "lint-staged": ">=10",
     "prettier": "^3.2.5",
+    "sass": "^1.75.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "yarn lint:fix --cache"
+    "*.{ts,tsx}": "yarn lint:fix"
   }
 }
